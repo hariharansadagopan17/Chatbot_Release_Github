@@ -25,7 +25,7 @@ class ReleaseBot {
                 owner,
                 repo,
                 workflow_id: 'release.yml',
-                ref: 'master',
+                ref: 'main',
                 inputs: {
                     artifact_id: artifactId
                 }
