@@ -1,0 +1,29 @@
+name: Release Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        description: 'Artifact ID for the release'
+        required: true
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build
+        run: |
+          echo "Building artifact ${{ github.event.inputs.artifact_id }}"
+          # Add your build steps here
+
+      - name: Run Tests
+        run: |
+          # Add your test steps here
+          echo "Running tests"
+
+      - name: Deploy
+        run: |
+          # Add your deployment steps here
+          echo "Deploying artifact ${{ github.event.inputs.artifact_id }}"
