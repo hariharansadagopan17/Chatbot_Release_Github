@@ -31,7 +31,7 @@ export class ReleaseBot {
             repo,
             run_id: runId
         });
-        return data.status;
+        return data.status ?? 'unknown';
     }
 
     async retryFailedPipeline(owner: string, repo: string, runId: number): Promise<void> {

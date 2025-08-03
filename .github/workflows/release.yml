@@ -20,10 +20,10 @@ jobs:
 
       - name: Run Tests
         run: |
-          # Add your test steps here
           echo "Running tests"
+          # Add your test steps here
 
       - name: Deploy
         run: |
-          # Add your deployment steps here
           echo "Deploying artifact ${{ github.event.inputs.artifact_id }}"
+          # Add your deployment steps here

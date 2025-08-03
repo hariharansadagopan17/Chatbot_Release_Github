@@ -1,9 +1,9 @@
-import { ReleaseBot } from './bot';
-import dotenv from 'dotenv';
+const { ReleaseBot } = require('./bot');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
-const bot = new ReleaseBot(process.env.GITHUB_TOKEN!);
+const bot = new ReleaseBot(process.env.GITHUB_TOKEN);
 
 async function main() {
     const [operation = 'trigger'] = process.argv.slice(2);
